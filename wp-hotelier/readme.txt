@@ -2,8 +2,8 @@
 Contributors: benitolopez
 Tags: booking, hotel, booking system, hostel, reservations, reservations, b&b, rooms, wphotelier
 Requires at least: 4.1
-Tested up to: 6.6
-Stable tag: 2.14.3
+Tested up to: 6.7
+Stable tag: 2.14.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -129,6 +129,9 @@ Here: [WP Hotelier documentation](http://docs.wphotelier.com/).
 4. WP Hotelier - Admin calendar.
 
 == Changelog ==
+
+= 2.14.4 - 2025-02-12 =
+* Fix - Reservation tables not showing correct info for paid deposits.
 
 = 2.14.3 - 2024-09-03 =
 * Fix - Fix selected children info.
