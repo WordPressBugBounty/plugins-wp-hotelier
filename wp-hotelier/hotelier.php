@@ -3,11 +3,11 @@
  * Plugin Name:       WP Hotelier
  * Plugin URI:        https://wphotelier.com/?utm_source=wpadmin&utm_medium=plugin&utm_campaign=wphotelierplugin
  * Description:       Hotel booking plugin for WordPress.
- * Version:           2.15.0
+ * Version:           2.18.1
  * Author:            WP Hotelier
  * Author URI:        https://wphotelier.com/
  * Requires at least: 4.0
- * Tested up to:      6.8
+ * Tested up to:      6.9
  * License:           GPLv3
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       wp-hotelier
@@ -31,7 +31,7 @@ final class Hotelier {
 	/**
 	 * @var string
 	 */
-	public $version = '2.15.0';
+	public $version = '2.18.1';
 
 	/**
 	 * @var Hotelier The single instance of the class
@@ -72,6 +72,13 @@ final class Hotelier {
 	 * @var object
 	 */
 	public $api = null;
+
+	/**
+	 * HTL REST API Object
+	 *
+	 * @var HTL_REST_Server
+	 */
+	public $rest_api = null;
 
 	/**
 	 * Main Hotelier Instance
@@ -253,6 +260,9 @@ final class Hotelier {
 		$this->api   = include( 'includes/class-htl-api.php' );
 		$this->query = include( 'includes/class-htl-query.php' );
 
+		// REST API.
+		include_once HTL_PLUGIN_DIR . 'includes/api/class-htl-rest-server.php';
+
 		include_once HTL_PLUGIN_DIR . 'includes/class-htl-post-types.php';
 		include_once HTL_PLUGIN_DIR . 'includes/htl-misc-functions.php';
 		include_once HTL_PLUGIN_DIR . 'includes/htl-country-functions.php';
@@ -307,6 +317,9 @@ final class Hotelier {
 		if ( $this->is_request( 'frontend' ) || $this->is_request( 'cron' ) || defined( 'HOTELIER_SHORTCODE_PREVIEW' ) ) {
 			$this->session  = new HTL_Session();
 		}
+
+		// Initialize REST API.
+		$this->rest_api = HTL_REST_Server::instance();
 
 		// Init action
 		do_action( 'hotelier_init' );

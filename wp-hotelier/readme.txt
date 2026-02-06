@@ -2,8 +2,8 @@
 Contributors: benitolopez
 Tags: booking, hotel, booking system, hostel, reservations, reservations, b&b, rooms, wphotelier
 Requires at least: 4.1
-Tested up to: 6.8
-Stable tag: 2.15.0
+Tested up to: 6.9
+Stable tag: 2.18.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -32,6 +32,7 @@ WP Hotelier is a complete hotel booking system for WordPress. Some of the featur
 * Offer discount codes (coupons).
 * List your rooms by using shortcodes.
 * Email notifications.
+* REST API (new!).
 
 = How it works? =
 
@@ -129,6 +130,22 @@ Here: [WP Hotelier documentation](http://docs.wphotelier.com/).
 4. WP Hotelier - Admin calendar.
 
 == Changelog ==
+
+= 2.18.1 - 2026-01-28 =
+* Fixed - Prevent fatal error with old Advanced Pricing extension.
+
+= 2.18.0 - 2026-01-28 =
+* Add - Support for WordPress 6.9.
+* Add - REST API.
+* Localization - POT file updated.
+
+= 2.17.0 - 2025-11-22 =
+* Add - Display rooms included in reservation
+* Add - Display creator name for manual reservations
+
+= 2.16.0 - 2025-10-18 =
+* Add - Ability to clear logs from admin.
+* Localization - POT file updated.
 
 = 2.15.0 - 2025-05-06 =
 * Add - Support for WordPress 6.8.
