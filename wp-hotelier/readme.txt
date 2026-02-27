@@ -3,7 +3,7 @@ Contributors: benitolopez
 Tags: booking, hotel, booking system, hostel, reservations, reservations, b&b, rooms, wphotelier
 Requires at least: 4.1
 Tested up to: 6.9
-Stable tag: 2.18.2
+Stable tag: 2.18.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -130,6 +130,9 @@ Here: [WP Hotelier documentation](http://docs.wphotelier.com/).
 4. WP Hotelier - Admin calendar.
 
 == Changelog ==
+
+= 2.18.3 - 2026-02-27 =
+* Fixed - Apply hotelier_get_all_extras_ids filter when returning early
 
 = 2.18.2 - 2026-02-08 =
 * Fixed - Fix datepicker i18n strings encoding apostrophes as HTML entities
